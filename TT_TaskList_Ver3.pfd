@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Design Version="1">
+  <Form Caption="TT Task List" Color="clBtnFace" Constraints.MinHeight="600" Constraints.MinWidth="916" Font.Charset="DEFAULT_CHARSET" Font.Color="clWindowText" Font.Height="-12" Font.Name="Arial" Font.Style="" Height="600" OnClose="OnClose" OnCreate="OnCreate" SaveSizeName="frmTT_TaskList" Visible="True" Width="916" WindowState="wsNormal">
+    <TUserMemoryTable Active="True" IndexName="Task" Name="memReport" Left="57" Top="436">
+      <TnIntegerField DisplayLabel="No." DisplayWidth="10" FieldName="Order">
+      </TnIntegerField>
+      <TnIntegerField DisplayLabel="Task ID" DisplayWidth="10" FieldName="TaskID">
+      </TnIntegerField>
+      <TnStringField DisplayLabel="Short Desc." DisplayWidth="30" DomainName="Short Description" FieldName="ShortDescription">
+      </TnStringField>
+      <TnUpperField DisplayLabel="Priority" DisplayWidth="6" DomainName="Z_TT_PRIORITY Priority Code" FieldName="PriorityCode">
+      </TnUpperField>
+      <TnUpperField DisplayLabel="Status" DisplayWidth="16" DomainName="Z_TT_STATUS Status Code" FieldName="StatusCode">
+      </TnUpperField>
+      <TnBooleanField DisplayLabel="WIP" DisplayWidth="6" FieldName="WorkInProgress">
+      </TnBooleanField>
+      <TnUpperField DisplayLabel="Staff" DisplayWidth="8" DomainName="CO User Code" FieldName="UserCode">
+      </TnUpperField>
+      <TnDateField DisplayLabel="Estimated" DisplayWidth="11" FieldName="DateEstimated">
+      </TnDateField>
+      <TIndexDef Fields="TaskID" Name="Task" Options="ixPrimary;ixUnique">
+      </TIndexDef>
+    </TUserMemoryTable>
+    <TUserTable Active="True" IsCustom="True" Name="tblTask" ReadOnly="False" TableName="TT_TASK" Left="52" Top="277">
+      <TnIntegerField DisplayLabel="Task" DisplayWidth="10" FieldName="TaskID" Visible="False">
+      </TnIntegerField>
+      <TnUpperField DisplayLabel="Customer" DisplayWidth="16" FieldName="CustomerCode">
+      </TnUpperField>
+      <TnUpperField DisplayLabel="Job" DisplayWidth="16" FieldName="JobCode" Visible="False">
+      </TnUpperField>
+      <TnStringField DisplayLabel="Short Desc." DisplayWidth="30" FieldName="ShortDescription">
+      </TnStringField>
+      <TnUpperField DisplayLabel="Priority" DisplayWidth="1" FieldName="PriorityCode">
+      </TnUpperField>
+      <TnBooleanField Alignment="taRightJustify" DisplayLabel="WIP" DisplayWidth="3" FieldName="WorkInProgress">
+      </TnBooleanField>
+      <TnUpperField DisplayLabel="Staff" DisplayWidth="8" FieldName="UserCode">
+      </TnUpperField>
+      <TnUpperField DisplayLabel="Status" DisplayWidth="16" FieldName="StatusCode">
+      </TnUpperField>
+      <TnDateField DisplayLabel="Estimated" DisplayWidth="11" FieldName="DateEstimated">
+      </TnDateField>
+      <TnDateField DisplayLabel="Completed" DisplayWidth="11" FieldName="DateCompleted">
+      </TnDateField>
+      <TnQuantityField DisplayWidth="10" FieldName="TimeSpent">
+      </TnQuantityField>
+      <TnQuantityField DisplayWidth="10" FieldName="TimeQuoted">
+      </TnQuantityField>
+      <TnQuantityField DisplayWidth="10" FieldName="TimeLeft">
+      </TnQuantityField>
+      <TnUpperField DisplayWidth="8" FieldName="CreatedUserCode" Visible="False">
+      </TnUpperField>
+      <TnDateField DisplayWidth="11" FieldName="CreatedDate">
+      </TnDateField>
+      <TnTimeField DisplayWidth="10" FieldName="CreatedTime" Visible="False">
+      </TnTimeField>
+      <TnUpperField DisplayWidth="8" FieldName="ModifiedUserCode" Visible="False">
+      </TnUpperField>
+      <TnDateField DisplayWidth="11" FieldName="ModifiedDate" Visible="False">
+      </TnDateField>
+      <TnTimeField DisplayWidth="10" FieldName="ModifiedTime" Visible="False">
+      </TnTimeField>
+      <TnStringField DisplayWidth="30" FieldName="RequestedWork" Visible="False">
+      </TnStringField>
+      <TnStringField DisplayWidth="30" FieldName="Comment" Visible="False">
+      </TnStringField>
+      <TnBooleanField Alignment="taRightJustify" DisplayWidth="3" FieldName="Historic">
+      </TnBooleanField>
+    </TUserTable>
+    <TUserTable Active="True" IsCustom="True" Name="tblDay" ReadOnly="False" TableName="TT_TASK" Left="57" Top="308">
+      <TnIntegerField DisplayWidth="10" FieldName="TaskID">
+      </TnIntegerField>
+      <TnUpperField DisplayWidth="16" FieldName="CustomerCode">
+      </TnUpperField>
+      <TnUpperField DisplayWidth="16" FieldName="JobCode">
+      </TnUpperField>
+      <TnStringField DisplayWidth="30" FieldName="ShortDescription">
+      </TnStringField>
+      <TnUpperField DisplayWidth="1" FieldName="PriorityCode">
+      </TnUpperField>
+      <TnUpperField DisplayWidth="16" FieldName="StatusCode">
+      </TnUpperField>
+      <TnBooleanField Alignment="taRightJustify" DisplayWidth="3" FieldName="WorkInProgress">
+      </TnBooleanField>
+      <TnUpperField DisplayWidth="8" FieldName="UserCode">
+      </TnUpperField>
+      <TnDateField DisplayWidth="11" FieldName="DateEstimated">
+      </TnDateField>
+      <TnDateField DisplayWidth="11" FieldName="DateCompleted">
+      </TnDateField>
+      <TnQuantityField DisplayWidth="10" FieldName="TimeEstimated">
+      </TnQuantityField>
+      <TnQuantityField DisplayWidth="10" FieldName="TimeQuoted">
+      </TnQuantityField>
+      <TnQuantityField DisplayWidth="10" FieldName="TimeSpent">
+      </TnQuantityField>
+      <TnQuantityField DisplayWidth="10" FieldName="TimeLeft">
+      </TnQuantityField>
+      <TnUpperField DisplayWidth="8" FieldName="CreatedUserCode">
+      </TnUpperField>
+      <TnDateField DisplayWidth="11" FieldName="CreatedDate">
+      </TnDateField>
+      <TnTimeField DisplayWidth="10" FieldName="CreatedTime">
+      </TnTimeField>
+      <TnUpperField DisplayWidth="8" FieldName="ModifiedUserCode">
+      </TnUpperField>
+      <TnDateField DisplayWidth="11" FieldName="ModifiedDate">
+      </TnDateField>
+      <TnTimeField DisplayWidth="10" FieldName="ModifiedTime">
+      </TnTimeField>
+      <TnStringField DisplayWidth="1000" FieldName="RequestedWork" Visible="False">
+      </TnStringField>
+      <TnStringField DisplayWidth="1000" FieldName="Comment" Visible="False">
+      </TnStringField>
+      <TnBooleanField Alignment="taRightJustify" DisplayWidth="3" FieldName="Historic">
+      </TnBooleanField>
+      <TnUpperField DisplayWidth="12" FieldName="PONo">
+      </TnUpperField>
+      <TnIntegerField DisplayWidth="10" FieldName="JobEstimateID">
+      </TnIntegerField>
+    </TUserTable>
+    <TUserTable Active="True" IsCustom="True" Name="tblWeek" ReadOnly="False" TableName="TT_TASK" Left="54" Top="341">
+    </TUserTable>
+    <TUserTable Active="True" IsCustom="True" Name="tblLater" ReadOnly="False" TableName="TT_TASK" Left="54" Top="381">
+    </TUserTable>
+    <TUserPanel Align="alBottom" BevelInner="bvRaised" BevelOuter="bvLowered" Height="40" Left="0" Name="panBottom" TabOrder="0" Top="522" Width="900">
+      <TUserButton Anchors="akRight;akBottom" Caption="Number" Height="27" ImageIndex="2055" Left="781" Name="btnSearch" OnClick="btnSearchOnClick" ShortCut="0" TabOrder="0" TabStop="True" Top="6" Width="111">
+      </TUserButton>
+    </TUserPanel>
+    <TUserGroupBox Align="alTop" Caption="Selections" Height="60" Left="0" Name="grpTop" TabOrder="1" Top="0" Width="900">
+      <TUserSpeedButton Height="22" ImageIndex="2124" Left="220" Name="btnAllUser" OnClick="btnAllUser" ShortCut="0" Top="20" Width="23">
+      </TUserSpeedButton>
+      <TUserSpeedButton Height="22" ImageIndex="2124" Left="470" Name="btnAllCustomer" OnClick="btnAllCustomer" ShortCut="0" Top="20" Width="23">
+      </TUserSpeedButton>
+      <TUserSpeedButton Enabled="False" Height="22" Hint="Create Customer Report" ImageIndex="2140" Left="866" Name="btnReport" OnClick="OnBtnCreateReportClick" ShortCut="0" Top="20" Width="23">
+      </TUserSpeedButton>
+      <TUserSpeedButton Height="22" ImageIndex="2001" Left="690" Name="btnRefresh" OnClick="LoadData" ShortCut="0" Top="20" Width="23">
+      </TUserSpeedButton>
+      <TUserDataCombo Align="alNone" Alignment="taLeftJustify" Anchors="akLeft;akTop" ButtonsAvailable="dcbLookup;dcbOpen;dcbWordLookup" Enabled="True" ExactAllowEmpty="True" Height="22" LabelCaption="Customer" LabelWidth="80" Left="260" LookupSource="ARCUST" LookupType="ltNormal" Name="eCustomer" OnAfterChange="LoadData" ReadOnly="True" TabOrder="1" TabStop="True" Top="20" Width="200">
+      </TUserDataCombo>
+      <TUserDataCombo Align="alNone" Alignment="taLeftJustify" Anchors="akLeft;akTop" ButtonsAvailable="dcbLookup;dcbOpen" Enabled="True" ExactAllowEmpty="True" Height="22" LabelCaption="User" LabelWidth="80" Left="10" LookupSource="COUSER" LookupType="ltNormal" Name="eUser" OnAfterChange="LoadData" TabOrder="0" TabStop="True" Top="20" Width="200">
+      </TUserDataCombo>
+      <TUserCheckBox Align="alNone" Anchors="akLeft;akTop" Height="22" LabelCaption="Include Historic" Left="723" Name="eHistoric" OnChange="LoadData" ReadOnly="False" TabOrder="2" TabStop="True" Top="20" Width="115">
+      </TUserCheckBox>
+      <TUserDateEdit Align="alNone" Alignment="taLeftJustify" Anchors="akLeft;akTop" Height="22" LabelCaption="Date" LabelWidth="50" Left="517" Name="eDate" OnChange="LoadData" TabOrder="3" TabStop="True" Top="20" Width="161">
+      </TUserDateEdit>
+    </TUserGroupBox>
+    <TUserGroupBox Align="alClient" Caption="Due Today or Eariler" Height="462" Left="0" Name="grpGroupBox1" TabOrder="2" Top="60" Width="450">
+      <TUserListGrid ActiveRowColor="clInfoBk" Align="alClient" Height="443" Left="32" Name="gridTask" OnClick="SetActiveTableToDay" OnDblClick="GridListDblClickDay" Table="tblDay" TabOrder="0" Top="17" Width="396">
+      </TUserListGrid>
+      <TUserGridNavigator Align="alLeft" Height="443" Left="2" Name="navGridTask" OnBtnClick="NavGridOnClick" Table="tblDay" Top="17" VisibleButtons="ebOpen;ebInsert;ebDelete;ebCustomise;ebPrint;ebFilterSort;ebRefresh" Width="30">
+        <TUserSpeedButton Height="22" Hint="Due Earlier" ImageIndex="2052" Left="4" Name="btnDueEariler" OnClick="DueEarlier" ShortCut="0" Top="169" Width="22">
+        </TUserSpeedButton>
+        <TUserSpeedButton Height="22" Hint="Due Later" ImageIndex="2049" Left="4" Name="btnDueLater" OnClick="DueLater" ShortCut="0" Top="193" Width="22">
+        </TUserSpeedButton>
+        <TUserSpeedButton Height="22" Hint="Change Date" ImageIndex="2149" Left="4" Name="btnChangeDate" OnClick="btnChangeDateOnClick" ShortCut="0" Top="217" Width="22">
+        </TUserSpeedButton>
+        <TUserSpeedButton Height="22" Hint="Complete Task" ImageIndex="2073" Left="4" Name="btnComplete" OnClick="btnCompleteOnClick" ShortCut="0" Top="241" Width="22">
+        </TUserSpeedButton>
+      </TUserGridNavigator>
+      <TUserGridScroller Align="alRight" BevelOuter="bvNone" Height="443" Left="428" Name="scrollGridScroller1" Table="tblDay" Top="17" Width="20">
+      </TUserGridScroller>
+    </TUserGroupBox>
+    <TUserPanel Align="alRight" BevelOuter="bvNone" Cursor="crSizeAll" Height="462" Left="450" Name="panRight" TabOrder="3" Top="60" Width="450">
+      <TUserGroupBox Align="alClient" Caption="Due This Week" Height="244" Left="0" Name="grpGroupBox2" TabOrder="0" Top="0" Width="450">
+        <TUserListGrid ActiveRowColor="clInfoBk" Align="alClient" Height="225" Left="2" Name="gridListGrid1" OnClick="SetActiveTableToWeek" OnDblClick="GridListDblClickWeek" Table="tblWeek" TabOrder="0" Top="17" Width="426">
+        </TUserListGrid>
+        <TUserGridScroller Align="alRight" BevelOuter="bvNone" Height="225" Left="428" Name="scrollGridScroller2" Table="tblWeek" Top="17" Width="20">
+        </TUserGridScroller>
+      </TUserGroupBox>
+      <TUserGroupBox Align="alBottom" Caption="Due Later" Cursor="crSizeNS" Height="218" Left="0" Name="grpGroupBox3" TabOrder="1" Top="244" Width="450">
+        <TUserListGrid ActiveRowColor="clInfoBk" Align="alClient" Height="199" Left="2" Name="gridListGrid2" OnClick="SetActiveTableToLater" OnDblClick="GridListDblClickLater" Table="tblLater" TabOrder="0" Top="17" Width="426">
+        </TUserListGrid>
+        <TUserGridScroller Align="alRight" BevelOuter="bvNone" Height="199" Left="428" Name="scrollGridScroller3" Table="tblLater" Top="17" Width="20">
+        </TUserGridScroller>
+      </TUserGroupBox>
+    </TUserPanel>
+  </Form>
+  <![CDATA['Modified by MM 29/01/2013:
+'Added Change Date Function.
+
+Dim ActiveTable as Object
+
+Sub SetActiveTableToDay
+  ActiveTable = tblDay
+End Sub
+
+Sub SetActiveTableToWeek
+  ActiveTable = tblWeek
+End Sub
+
+Sub SetActiveTableToLater
+  ActiveTable = tblLater
+End Sub
+
+Sub btnChangeDateOnClick
+  ActiveTable.Last
+  Do Until ActiveTable.Bof
+    If ActiveTable.DateEstimated <> eDate.Value Then
+      ActiveTable.Edit
+      ActiveTable.DateEstimated = eDate.Value
+      ActiveTable.ModifiedDate = Date
+      ActiveTable.ModifiedTime = Time
+      ActiveTable.ModifiedUserCode = LoginUserName
+      ActiveTable.Save
+    End If
+    ActiveTable.Prev
+  Loop
+End Sub
+
+Public Sub LoadData
+
+
+  Dim User as String
+  Dim Customer as String
+  Dim Historic as Boolean
+  Dim myDate as Date
+
+  User = eUser.Text
+  Customer = eCustomer.Text
+  Historic = eHistoric.Checked
+  myDate = eDate.Value
+
+  Dim myDayOfWeek as Number
+  Dim WeekEnd as Date
+
+  WeekEnd = myDate
+
+  Do Until myDayOfWeek = 7
+    WeekEnd = WeekEnd + 1
+    myDayOfWeek=DayOfWeek(WeekEnd)
+    'msgbox(WeekEnd)
+    'msgbox(myDayOfWeek)
+  Loop
+
+
+  If Historic Then
+    If User <> "" Then
+      If Customer <> "" Then
+
+        tblDay.IndexName = "UserCustomerDate"
+        tblDay.SetRangeStart(User,Customer,#01/01/1900#)
+        tblDay.SetRangeEnd(User,Customer,myDate)
+
+        tblWeek.IndexName = "UserCustomerDate"
+        tblWeek.SetRangeStart(User,Customer,myDate+1)
+        tblWeek.SetRangeEnd(User,Customer,WeekEnd)
+
+        tblLater.IndexName = "UserCustomerDate"
+        tblLater.SetRangeStart(User,Customer,WeekEnd+1)
+        tblLater.SetRangeEnd(User,Customer,#31/12/2099#)
+
+      Else
+        tblDay.IndexName = "UserDate"
+        tblDay.SetRangeStart(User,#01/01/1900#)
+        tblDay.SetRangeEnd(User,myDate)
+
+        tblWeek.IndexName = "UserDate"
+        tblWeek.SetRangeStart(User,myDate+1)
+        tblWeek.SetRangeEnd(User,WeekEnd)
+
+        tblLater.IndexName = "UserDate"
+        tblLater.SetRangeStart(User,WeekEnd+1)
+        tblLater.SetRangeEnd(User,#31/12/2099#)
+      End If
+    Else
+    'User = Blank
+      If Customer <> "" Then
+
+        tblDay.IndexName = "CustomerDate"
+        tblDay.SetRangeStart(Customer,#01/01/1900#)
+        tblDay.SetRangeEnd(Customer,myDate)
+
+        tblWeek.IndexName = "CustomerDate"
+        tblWeek.SetRangeStart(Customer,myDate+1)
+        tblWeek.SetRangeEnd(Customer,WeekEnd)
+
+        tblLater.IndexName = "CustomerDate"
+        tblLater.SetRangeStart(Customer,WeekEnd+1)
+        tblLater.SetRangeEnd(Customer,#31/12/2099#)
+
+      Else
+        tblDay.IndexName = "Date"
+        tblDay.SetRangeStart(#01/01/1900#)
+        tblDay.SetRangeEnd(myDate)
+
+        tblWeek.IndexName = "Date"
+        tblWeek.SetRangeStart(myDate+1)
+        tblWeek.SetRangeEnd(WeekEnd)
+
+        tblLater.IndexName = "Date"
+        tblLater.SetRangeStart(WeekEnd+1)
+        tblLater.SetRangeEnd(#31/12/2099#)
+      End If
+    End If
+  Else
+    If User <> "" Then
+      If Customer <> "" Then
+
+        tblDay.IndexName = "HistoricUserCustomerDate"
+        tblDay.SetRangeStart(False,User,Customer,#01/01/1900#)
+        tblDay.SetRangeEnd(False,User,Customer,myDate)
+
+        tblWeek.IndexName = "HistoricUserCustomerDate"
+        tblWeek.SetRangeStart(False,User,Customer,myDate+1)
+        tblWeek.SetRangeEnd(False,User,Customer,WeekEnd)
+
+        tblLater.IndexName = "HistoricUserCustomerDate"
+        tblLater.SetRangeStart(False,User,Customer,WeekEnd+1)
+        tblLater.SetRangeEnd(False,User,Customer,#31/12/2099#)
+
+      Else
+        tblDay.IndexName = "HistoricUserDate"
+        tblDay.SetRangeStart(False,User,#01/01/1900#)
+        tblDay.SetRangeEnd(False,User,myDate)
+
+        tblWeek.IndexName = "HistoricUserDate"
+        tblWeek.SetRangeStart(False,User,myDate+1)
+        tblWeek.SetRangeEnd(False,User,WeekEnd)
+
+        tblLater.IndexName = "HistoricUserDate"
+        tblLater.SetRangeStart(False,User,WeekEnd+1)
+        tblLater.SetRangeEnd(False,User,#31/12/2099#)
+      End If
+    Else
+    'User = Blank
+      If Customer <> "" Then
+
+        tblDay.IndexName = "HistoricCustomerDate"
+        tblDay.SetRangeStart(False,Customer,#01/01/1900#)
+        tblDay.SetRangeEnd(False,Customer,myDate)
+
+        tblWeek.IndexName = "HistoricCustomerDate"
+        tblWeek.SetRangeStart(False,Customer,myDate+1)
+        tblWeek.SetRangeEnd(False,Customer,WeekEnd)
+
+        tblLater.IndexName = "HistoricCustomerDate"
+        tblLater.SetRangeStart(False,Customer,WeekEnd+1)
+        tblLater.SetRangeEnd(False,Customer,#31/12/2099#)
+
+      Else
+        tblDay.IndexName = "HistoricDate"
+        tblDay.SetRangeStart(False,#01/01/1900#)
+        tblDay.SetRangeEnd(False,myDate)
+
+        tblWeek.IndexName = "HistoricDate"
+        tblWeek.SetRangeStart(False,myDate+1)
+        tblWeek.SetRangeEnd(False,WeekEnd)
+
+        tblLater.IndexName = "HistoricDate"
+        tblLater.SetRangeStart(False,WeekEnd+1)
+        tblLater.SetRangeEnd(False,#31/12/2099#)
+      End If
+    End If
+  End If
+
+End Sub
+
+Sub btnAllUser
+  If eUser.ReadOnly = False Then
+    eUser.ReadOnly = True
+    eUser.Text = ""
+  Else
+    eUser.ReadOnly = False
+    eUser.Text = LoginUserName
+  End If
+  Call LoadData
+End Sub
+
+Sub btnAllCustomer
+  If eCustomer.ReadOnly = False Then
+    eCustomer.ReadOnly = True
+    eCustomer.Text = ""
+  Else
+    eCustomer.ReadOnly = False
+  End If
+  Call LoadData
+End Sub
+
+Sub OnCreate
+  Self.Name = "FormTaskListV2"
+  eUser.Text = LoginUserName
+  eDate.Value = Date
+  Call SetActiveTableToDay
+'  eStatus.Text = "OPEN"
+  Call LoadData
+End Sub
+
+Sub GridListDblClickDay
+  Public pubTaskID as Number
+  pubTaskID = tblDay.TaskID
+
+  Dim TaskEdit as Object
+  TaskEdit = CreateCustomForm("TT_TaskEdit_Ver1")
+  'Call TaskEdit.LoadData
+End Sub'
+
+Sub GridListDblClickWeek
+  Public pubTaskID as Number
+  pubTaskID = tblWeek.TaskID
+
+  Dim TaskEdit as Object
+  TaskEdit = CreateCustomForm("TT_TaskEdit_Ver1")
+  'Call TaskEdit.LoadData
+End Sub'
+
+Sub GridListDblClickLater
+  Public pubTaskID as Number
+  pubTaskID = tblLater.TaskID
+
+  Dim TaskEdit as Object
+  TaskEdit = CreateCustomForm("TT_TaskEdit_Ver1")
+  'Call TaskEdit.LoadData
+End Sub'
+
+Sub CallGridListDblClick(Sender as Object)
+  If Sender = tblDay then Call GridListDblClickDay
+  If Sender = tblWeek then Call GridListDblClickWeek
+  if Sender = tblLater then Call GridListDblClickLater
+End Sub
+
+'Sub NavGridOnClickDay(Sender as Object, Button as Number,byRef Handled as Boolean)
+''  msgbox(Button)
+''  msgbox(ebFilterSort)
+'  If Button = ebOpen Then
+'    Call GridListDblClickDay
+'  ElseIf Button = ebInsert Then
+'    Public pubTaskID as Number
+'    pubTaskID = 0
+'
+'    Dim TaskEdit as Object
+'    TaskEdit = CreateCustomForm("TT_TaskEdit_Ver1")
+'  ElseIf Button = ebPrint Then
+'    Dim myReport as Object
+'    Report = CreateReport(tblTask,"Task List Report")
+'  ElseIf Button = ebRefresh Then
+'    Call LoadData
+'  ElseIf Button = ebDelete THen
+'    tblDay.Edit
+'    tblDay.StatusCode = "DELETED"
+'    tblDay.ModifiedUserCode = LoginUserName
+'    tblDay.ModifiedDate = Date
+'    tblDay.ModifiedTime = Time
+'    tblDay.Save
+'  ElseIf Button = ebFilterSort Then
+'    tblDay.FilterSort.Edit
+'  End If
+'  Handled = True
+'End Sub
+
+Sub NavGridOnClick(Sender as Object, Button as Number,byRef Handled as Boolean)
+'  msgbox(Button)
+'  msgbox(ebFilterSort)
+  If Button = ebOpen Then
+    Call CallGridListDblClick(ActiveTable)
+  ElseIf Button = ebInsert Then
+    Public pubTaskID as Number
+    pubTaskID = 0
+
+    Dim TaskEdit as Object
+    TaskEdit = CreateCustomForm("TT_TaskEdit_Ver1")
+  ElseIf Button = ebPrint Then
+    Dim myReport as Object
+    Report = CreateReport(ActiveTable,"Task List Report")
+  ElseIf Button = ebRefresh Then
+    Call LoadData
+  ElseIf Button = ebDelete THen
+    ActiveTable.Edit
+    ActiveTable.StatusCode = "DELETED"
+    ActiveTable.ModifiedUserCode = LoginUserName
+    ActiveTable.ModifiedDate = Date
+    ActiveTable.ModifiedTime = Time
+    ActiveTable.Historic = True
+    ActiveTable.Save
+  ElseIf Button = ebFilterSort Then
+    ActiveTable.FilterSort.Edit
+  End If
+  Handled = True
+End Sub
+
+Sub btnSearchOnClick
+  Dim searchID as Number
+  searchID = Val(InputBox("Enter ID:"))
+
+  if SearchID <> 0 Then
+    tblDay.IndexName = "Task"
+    If tblDay.FindExact(searchID) Then
+      'Self.ActiveProperty = "gridTask"
+    End If
+  End If
+End Sub
+
+Sub OnClose
+  pubTaskID = Nothing
+End Sub
+
+Sub DueEarlier
+  ActiveTable.Edit
+  If ActiveTable.DateEstimated > eDate.Value Then
+    ActiveTable.DateEstimated = eDate.Value
+  Else
+    ActiveTable.DateEstimated = ActiveTable.DateEstimated - 1
+  End If
+  ActiveTable.ModifiedUserCode = LoginUserName
+  ActiveTable.ModifiedDate = Date
+  ActiveTable.ModifiedTime = Time
+  ActiveTable.Save
+  Call LoadData
+End Sub
+
+Sub DueLater
+  ActiveTable.Edit
+  If ActiveTable.DateEstimated > eDate.Value Then
+    ActiveTable.DateEstimated = ActiveTable.DateEstimated + 1
+  Else
+    ActiveTable.DateEstimated = eDate.Value + 1
+  End If
+  ActiveTable.ModifiedUserCode = LoginUserName
+  ActiveTable.ModifiedDate = Date
+  ActiveTable.ModifiedTime = Time
+  ActiveTable.Save
+  Call LoadData
+End Sub
+
+Sub MailTaskComplete(custCode as string, shortDesc as String, userCode as string, jobCode as string, taskID as number, details as string , comments as string)
+
+  Dim Mailer as Object
+  Mailer = CreateObject("Accredo.SMTPMailer")
+  Mailer.From = Company.EmailAddress
+  Mailer.To = "Sue.Brunton@brunton.co.nz"
+  Mailer.CC = "mm@brunton.co.nz"
+  'Mailer.To = "lena.salim@brunton.co.nz"
+
+  Dim StaffTable as Object
+  StaffTable = OpenCustomTable("CRM_STAFF")
+  StaffTable.IndexName = "INI"
+  If StaffTable.Findexact(eUser.Text) Then
+    Mailer.CC = Mailer.CC & "; " & StaffTable.Email
+  Else
+    'abort("Email address not found for " & memJTStaffClone.StaffMember)
+    Print "Email address not found for " & eUser.Text
+  End If
+
+  Mailer.Subject = "Task Complete - " & custCode & " - " & shortDesc ' User.WindowsUserName & " " & "Task Complete"
+  Mailer.Contents.SetLine(1, "Task for " &  custCode & ", Job : " &  jobCode & " - completed by: " & userCode & " On " & Date & " " & Time)
+  Mailer.Contents.SetLine(3, "Task ID: " & taskID & " - Task Name: " & shortDesc)
+  Mailer.Contents.SetLine(5, "Details: " & details)
+  Mailer.Contents.SetLine(7, "Comments: " & comments)
+  Try
+    Mailer.Send
+  Catch e
+    msgbox("Error- Could not send task completion email - " & E.message)
+  End Try
+End Sub
+
+Sub btnCompleteOnClick
+
+  if InputQuery("Do you want to complete task ?" & Chr(10) & Chr(13) & "Task ID: " & ActiveTable.TaskID & Chr(10) & chr(13) & ActiveTable.ShortDescription) then
+    ActiveTable.Edit
+    ActiveTable.StatusCode="COMPLETED"
+    ActiveTable.DateCompleted = Date
+    ActiveTable.ModifiedUserCode = LoginUserName
+    ActiveTable.ModifiedDate = Date
+    ActiveTable.ModifiedTime = Time
+    ActiveTable.Historic = True
+    ActiveTable.Save
+    call MailTaskComplete (ActiveTable.customerCode, ActiveTable.ShortDescription, LoginUserName, ActiveTable.JobCode, ActiveTable.TaskID, ActiveTable.RequestedWork, ActiveTable.comment)
+    Call LoadData
+    Msgbox("Task marked complete")
+  end if
+
+End Sub
+
+
+'Sub btnRaisePriority
+'  If tblTask.PriorityCode = "B" Then
+'    tblTask.Edit
+'    tblTask.PriorityCode = "A"
+'    tblTask.ModifiedUserCode = LoginUserName
+'    tblTask.ModifiedDate = Date
+'    tblTask.ModifiedTime = Time
+'    tblTask.Save
+'  ElseIf  tblTask.PriorityCode = "C" Then
+'    tblTask.Edit
+'    tblTask.PriorityCode = "B"
+'    tblTask.ModifiedUserCode = LoginUserName
+'    tblTask.ModifiedDate = Date
+'    tblTask.ModifiedTime = Time
+'    tblTask.Save
+'  End If
+'End Sub
+'
+'Sub btnLowerPriority
+'  If tblTask.PriorityCode = "A" Then
+'    tblTask.Edit
+'    tblTask.PriorityCode = "B"
+'    tblTask.ModifiedUserCode = LoginUserName
+'    tblTask.ModifiedDate = Date
+'    tblTask.ModifiedTime = Time
+'    tblTask.Save
+'  ElseIf  tblTask.PriorityCode = "B" Then
+'    tblTask.Edit
+'    tblTask.PriorityCode = "C"
+'    tblTask.ModifiedUserCode = LoginUserName
+'    tblTask.ModifiedDate = Date
+'    tblTask.ModifiedTime = Time
+'    tblTask.Save
+'  End If
+'End Sub
+
+'Sub OnBtnCreateReportClick
+'  memReport.Empty
+'
+'  tblTask.IndexName = "StatusCustomerPriority"
+'  tblTask.SetRange("OPEN",eCustomer.Text)
+'  tblTask.First
+'  Do Until tblTask.Eof
+'    memReport.Append
+'    CopyFieldsByName(tblTask,memReport)
+'    memReport.TaskID = tblTask.TaskID
+'    memReport.Save
+'    tblTask.Next
+'  Loop
+'  tblTask.SetRange("WAITING",eCustomer.Text)
+'  tblTask.First
+'  Do Until tblTask.Eof
+'    memReport.Append
+'    CopyFieldsByName(tblTask,memReport)
+'    memReport.Save
+'    tblTask.Next
+'  Loop
+'  memReport.IndexName = "Task"
+'  Dim Order as Number
+'  Order = 1
+'  memReport.First
+'  Do Until memReport.Eof
+'    memReport.Edit
+'    memReport.Order = Order
+'    memReport.Save
+'    Order = Order + 1
+'    memReport.Next
+'  Loop
+'  Call LoadData
+'  'BrowseDataSet(memReport)
+'  Dim Report as Object
+'  Report = CreateReport(memReport,eCustomer.Text & " - Task List")
+'
+'End Sub]]>
+</Design>
